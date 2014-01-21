@@ -1,5 +1,5 @@
 {
-    "name": "ob/cache-nuke-bundle",
+    "name": "ob/cachenuke-bundle",
     "type": "symfony-bundle",
     "description": "Symfony2 bundle that provides a nice button to annihilate your cache from the comfort of your browser",
     "keywords": ["symfony2", "nuke", "cache", "clear", "ob", "marcaube"],
