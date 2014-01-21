@@ -1,0 +1,11 @@
+ob_cache_nuke_clear:
+    pattern:  /nuke
+    defaults: { _controller: ObCacheNukeBundle:Nuke:index }
+    options:
+        expose: true
+
+#ob_cache_nuke_button:
+#    pattern: /nuke-button
+#    defaults:
+#        _controller: FrameworkBundle:Template:template
+#        template: 'ObCacheNukeBundle::button.html.twig'

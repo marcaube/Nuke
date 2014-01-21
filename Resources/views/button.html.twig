@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="{{ asset('bundles/obcachenuke/css/ladda.min.css') }}"/>
+
+<button class="ladda-button" data-color="red" data-style="slide-up" data-size="s">
+    <span class="ladda-label">Clear cache</span>
+    <span class="ladda-spinner"></span>
+    <div class="ladda-progress" style="width: 0px;"></div>
+</button>
+
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+<script src="{{ asset('bundles/obcachenuke/js/spin.min.js') }}"></script>
+<script src="{{ asset('bundles/obcachenuke/js/ladda.min.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var button = Ladda.create(document.querySelector('.ladda-button'));
+
+        [].forEach.call(document.querySelectorAll('.ladda-button'), function(el) {
+            el.addEventListener('click', function() {
+                button.start();
+
+                var r = new XMLHttpRequest()
+                r.open('GET', Routing.generate('ob_cache_nuke_clear'));
+                r.onreadystatechange = function() {
+                    if (r.readyState != 4 || r.status != 200) return;
+                    button.stop();
+                }
+                r.send();
+            });
+        });
+    });
+</script>
