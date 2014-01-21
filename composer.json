@@ -14,5 +14,13 @@
 
     "require": {
         "friendsofsymfony/jsrouting-bundle": "1.5.2"
-    }
+    },
+    
+    "autoload": {
+        "psr-0": {
+            "Ob\\CacheNukeBundle": ""
+        }
+    },
+    
+    "target-dir": "Ob/CacheNukeBundle"
 }
