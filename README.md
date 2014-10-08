@@ -16,22 +16,7 @@ Import the template fragment where you need it ...
 
 ## Installation
 
-#### Add the bundle to you composer.json
-
-```yml
-{
-    "require": {
-        "ob/cachenuke-bundle": "*"
-    }
-}
-```
-
-#### And run these commands to install
-
-```bash
-$ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar update "ob/cachenuke-bundle"
-```
+#### Run `composer require ob/cachenuke-bundle`
 
 #### Register the bundles in `app/AppKernel.php`
 
