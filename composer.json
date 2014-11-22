@@ -13,7 +13,7 @@
     ],
 
     "require": {
-        "friendsofsymfony/jsrouting-bundle": "1.5.2"
+        "friendsofsymfony/jsrouting-bundle": "~1.5"
     },
     
     "autoload": {
